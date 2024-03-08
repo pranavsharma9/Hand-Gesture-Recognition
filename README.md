@@ -20,11 +20,6 @@ Here, I have implemented CNN (Convolution Neural Network) using Keras.
     ```
     Adjust the hsv values from the track bar to segment your hand color.
 
-3. To create your own data set.
-    ```
-    python capture.py
-    ```
-
 
 
 
