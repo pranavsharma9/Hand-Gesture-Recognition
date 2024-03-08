@@ -107,10 +107,14 @@ while True:
     imcrop = img[102:298, 427:623]
     hsv = cv2.cvtColor(imcrop, cv2.COLOR_BGR2HSV)
     mask = cv2.inRange(hsv, lower_blue, upper_blue)
+
+    result=cv2.bitwise_and(imcrop,imcrop,mask=mask)
+    result=cv2.bitwise_and(imcrop,imcrop,mask=mask)
     
     cv2.putText(frame, img_text, (30, 400), cv2.FONT_HERSHEY_TRIPLEX, 1.5, (0, 255, 0))
     cv2.imshow("test", frame)
     cv2.imshow("mask", mask)
+    cv2.imshow("result",result)
     
     #if cv2.waitKey(1) == ord('c'):
         
